@@ -15,6 +15,7 @@ dependencies = [
     "psycopg[binary]>=3.3.6",
     "pydantic>=2.13.5",
     "sqlalchemy>=2.1.0",
+    "uuid7>=0.1.0",
 ]
 
 [project.scripts]

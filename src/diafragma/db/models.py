@@ -1,4 +1,4 @@
-import uuid
+from uuid import UUID
 from datetime import date, datetime
 from typing import Annotated, Any
 
@@ -22,7 +22,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from diafragma.db.base import Base
 
 UuidPk = Annotated[
-    uuid.UUID, mapped_column(primary_key=True, server_default=text("uuidv7()"))
+    UUID, mapped_column(primary_key=True, server_default=text("uuidv7()"))
 ]
 CreatedAt = Annotated[
     datetime, mapped_column(DateTime(timezone=True), server_default=func.now())
@@ -112,7 +112,7 @@ class ProductPhoto(Base):
     __table_args__ = (UniqueConstraint("product_id", "position"),)
 
     id: Mapped[UuidPk]
-    product_id: Mapped[uuid.UUID] = mapped_column(
+    product_id: Mapped[UUID] = mapped_column(
         ForeignKey("product.id", ondelete="CASCADE")
     )
     s3_key: Mapped[str] = mapped_column(String(512))
@@ -132,7 +132,7 @@ class ProductPrice(Base):
     )
 
     id: Mapped[UuidPk]
-    product_id: Mapped[uuid.UUID] = mapped_column(
+    product_id: Mapped[UUID] = mapped_column(
         ForeignKey("product.id", ondelete="CASCADE")
     )
     country: Mapped[CountryCode]
@@ -160,8 +160,8 @@ class Unit(Base):
     )
 
     id: Mapped[UuidPk]
-    product_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("product.id"))
-    store_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("store.id"))
+    product_id: Mapped[UUID] = mapped_column(ForeignKey("product.id"))
+    store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
     serial_number: Mapped[str] = mapped_column(String(100), unique=True)
     condition: Mapped[str] = mapped_column(String(20), server_default="new")
     status: Mapped[str] = mapped_column(String(20), server_default="active")
@@ -183,7 +183,7 @@ class Maintenance(Base):
     )
 
     id: Mapped[UuidPk]
-    unit_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("unit.id"))
+    unit_id: Mapped[UUID] = mapped_column(ForeignKey("unit.id"))
     reason: Mapped[str] = mapped_column(Text)
     starts_at: Mapped[Timestamp]
     expected_end_at: Mapped[Timestamp | None]
@@ -211,9 +211,9 @@ class Reservation(Base):
     )
 
     id: Mapped[UuidPk]
-    client_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("client.id"))
-    pickup_store_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("store.id"))
-    return_store_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("store.id"))
+    client_id: Mapped[UUID] = mapped_column(ForeignKey("client.id"))
+    pickup_store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
+    return_store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
     starts_at: Mapped[Timestamp]
     ends_at: Mapped[Timestamp]
     status: Mapped[str] = mapped_column(String(20), server_default="pending")
@@ -237,10 +237,10 @@ class ReservationItem(Base):
     )
 
     id: Mapped[UuidPk]
-    reservation_id: Mapped[uuid.UUID] = mapped_column(
+    reservation_id: Mapped[UUID] = mapped_column(
         ForeignKey("reservation.id", ondelete="CASCADE")
     )
-    unit_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("unit.id"))
+    unit_id: Mapped[UUID] = mapped_column(ForeignKey("unit.id"))
     daily_rate_cents: Mapped[Cents]
 
     reservation: Mapped["Reservation"] = relationship(back_populates="items")
@@ -260,7 +260,7 @@ class Payment(Base):
     )
 
     id: Mapped[UuidPk]
-    reservation_id: Mapped[uuid.UUID] = mapped_column(ForeignKey("reservation.id"))
+    reservation_id: Mapped[UUID] = mapped_column(ForeignKey("reservation.id"))
     kind: Mapped[str] = mapped_column(String(20))
     amount_cents: Mapped[Cents]
     currency: Mapped[CurrencyCode]
