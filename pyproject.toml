@@ -1,0 +1,25 @@
+[project]
+name = "diafragma"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Dayvdallyson", email = "dayvdallyson21@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.20.0",
+    "asyncpg>=0.31.0",
+    "dotenv>=0.9.9",
+    "fastapi[standard]>=0.141.1",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.13.5",
+    "sqlalchemy>=2.1.0",
+]
+
+[project.scripts]
+diafragma = "diafragma:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
