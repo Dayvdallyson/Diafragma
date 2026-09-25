@@ -23,3 +23,12 @@ def create_product(
     session.refresh(product)
 
     return product
+
+def get_product():
+    ...
+
+def update_product():
+    ...
+
+def delete_product():
+    ...
