@@ -1,5 +1,4 @@
 from uuid import UUID
-from fastapi import HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from diafragma.db.models import Product
@@ -8,57 +7,51 @@ from diafragma.schemas.products.schemas import (
     UpdateProductRequest,
 )
 
-def create_product(
-    payload: CreateProductRequest,
-    session: Session,
-) -> Product:
-    product = Product(
-        sku=payload.sku,
-        name=payload.name,
-        brand=payload.brand,
-        category=payload.category,
-        description=payload.description,
-        specifications=payload.specifications,
-        min_rental_days=payload.min_rental_days,
-        max_rental_days=payload.max_rental_days,
-    )
+class ProductNotFoundError(Exception):
+    pass
 
+class InvalidRentalDaysError(Exception):
+    pass
+
+def create_product(payload: CreateProductRequest, session: Session) -> Product:
+    product = Product(**payload.model_dump())
     session.add(product)
     session.commit()
-    session.refresh(product)
-
     return product
 
-def get_products(
-    session: Session,
-) -> list[Product]:
-    statement = select(Product)
-    return list(session.scalars(statement).all())
+def get_products(session: Session) -> list[Product]:
+    stmt = select(Product).order_by(Product.name)
+    return list(session.scalars(stmt))
 
-def get_product(
-    id: UUID,
-    session: Session,
-) -> Product | None:
-    return session.get(Product, id)
-
+def get_product(product_id: UUID, session: Session) -> Product:
+    product = session.get(Product, product_id)
+    if product is None:
+        raise ProductNotFoundError(product_id)
+    return product
 
 def update_product(
-    id: UUID,
-    data: UpdateProductRequest,
-):
-    ...
-
-def delete_product(
-    id: UUID,
+    product_id: UUID,
+    payload: UpdateProductRequest,
     session: Session,
-) -> None:
-    product = session.get(Product, id)
+) -> Product:
+    product = get_product(product_id, session)
 
-    if product is None:
-        raise HTTPException(
-            status_code=404,
-            detail="Product not found",
+    values = payload.model_dump(exclude_unset=True)
+
+    min_days = values.get("min_rental_days", product.min_rental_days)
+    max_days = values.get("max_rental_days", product.max_rental_days)
+    if min_days > max_days:
+        raise InvalidRentalDaysError(
+            f"min_rental_days ({min_days}) cannot be greater than "
+            f"max_rental_days ({max_days})"
         )
 
+    for field, value in values.items():
+        setattr(product, field, value)
+    session.commit()
+    return product
+
+def delete_product(product_id: UUID, session: Session) -> None:
+    product = get_product(product_id, session)
     session.delete(product)
     session.commit()
