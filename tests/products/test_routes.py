@@ -12,6 +12,7 @@ VALID_PAYLOAD = {
 
 # POST
 
+
 def test_create_returns_201_and_body(client):
     response = client.post("/products", json=VALID_PAYLOAD)
 
@@ -66,6 +67,7 @@ def test_create_duplicate_sku_returns_409(client, product):
 
 # GET (products)
 
+
 def test_list_products(client, product):
     response = client.get("/products")
 
@@ -81,6 +83,7 @@ def test_list_products_empty(client):
 
 
 # GET (product)
+
 
 def test_get_product(client, product):
     response = client.get(f"/products/{product.id}")
@@ -103,6 +106,7 @@ def test_get_product_invalid_uuid_returns_422(client):
 
 
 # PATCH
+
 
 def test_patch_partial_update(client, product):
     response = client.patch(f"/products/{product.id}", json={"name": "Canon EOS R6 II"})
@@ -162,6 +166,7 @@ def test_patch_duplicate_sku_returns_409(client, product, make_product):
 
 
 # DELETE
+
 
 def test_delete_returns_204(client, product):
     response = client.delete(f"/products/{product.id}")

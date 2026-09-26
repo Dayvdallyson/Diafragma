@@ -1,6 +1,6 @@
-from uuid import UUID
 from datetime import date, datetime
 from typing import Annotated, Any
+from uuid import UUID
 
 from sqlalchemy import (
     BigInteger,
@@ -36,6 +36,7 @@ Cents = Annotated[int, mapped_column(BigInteger)]
 def one_of(column: str, values: list[str]) -> str:
     options = ", ".join(f"'{v}'" for v in values)
     return f"{column} IN ({options})"
+
 
 class Client(Base):
     __tablename__ = "client"
@@ -179,7 +180,9 @@ class Maintenance(Base):
         CheckConstraint(
             "(cost_cents IS NULL) = (currency IS NULL)", name="cost_has_currency"
         ),
-        CheckConstraint("ended_at IS NULL OR ended_at > starts_at", name="valid_period"),
+        CheckConstraint(
+            "ended_at IS NULL OR ended_at > starts_at", name="valid_period"
+        ),
     )
 
     id: Mapped[UuidPk]
@@ -201,7 +204,14 @@ class Reservation(Base):
         CheckConstraint(
             one_of(
                 "status",
-                ["pending", "confirmed", "picked_up", "returned", "cancelled", "expired"],
+                [
+                    "pending",
+                    "confirmed",
+                    "picked_up",
+                    "returned",
+                    "cancelled",
+                    "expired",
+                ],
             ),
             name="status_valid",
         ),
@@ -252,7 +262,9 @@ class Payment(Base):
     __table_args__ = (
         UniqueConstraint("provider", "external_id"),
         CheckConstraint("amount_cents > 0", name="amount_positive"),
-        CheckConstraint(one_of("kind", ["rental", "deposit", "penalty"]), name="kind_valid"),
+        CheckConstraint(
+            one_of("kind", ["rental", "deposit", "penalty"]), name="kind_valid"
+        ),
         CheckConstraint(
             one_of("status", ["pending", "approved", "declined", "refunded"]),
             name="status_valid",

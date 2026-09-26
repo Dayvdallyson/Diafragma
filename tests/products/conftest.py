@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 
 from diafragma.db.models import Product
 
+
 @pytest.fixture
 def make_product(session: Session) -> Callable[..., Product]:
     def _make_product(**overrides: Any) -> Product:

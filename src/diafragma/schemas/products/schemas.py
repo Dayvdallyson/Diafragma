@@ -16,6 +16,7 @@ Category = Annotated[
     BeforeValidator(normalize_category),
 ]
 
+
 class CreateProductRequest(BaseModel):
     sku: str = Field(max_length=64)
     name: str = Field(max_length=200)

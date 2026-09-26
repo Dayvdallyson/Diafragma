@@ -25,17 +25,20 @@ router = APIRouter(prefix="/products", tags=["products"])
 
 SessionDep = Annotated[Session, Depends(get_db)]
 
+
 def _not_found() -> HTTPException:
     return HTTPException(
         status_code=status.HTTP_404_NOT_FOUND,
         detail="Product not found",
     )
 
+
 def _sku_conflict() -> HTTPException:
     return HTTPException(
         status_code=status.HTTP_409_CONFLICT,
         detail="Product with this sku already exists",
     )
+
 
 @router.post("", response_model=ProductResponse, status_code=status.HTTP_201_CREATED)
 def create(payload: CreateProductRequest, session: SessionDep):
@@ -45,9 +48,11 @@ def create(payload: CreateProductRequest, session: SessionDep):
         session.rollback()
         raise _sku_conflict()
 
+
 @router.get("", response_model=list[ProductResponse])
 def get_all(session: SessionDep):
     return get_products(session)
+
 
 @router.get("/{product_id}", response_model=ProductResponse)
 def get(product_id: UUID, session: SessionDep):
@@ -55,6 +60,7 @@ def get(product_id: UUID, session: SessionDep):
         return get_product(product_id, session)
     except ProductNotFoundError:
         raise _not_found()
+
 
 @router.patch("/{product_id}", response_model=ProductResponse)
 def update(product_id: UUID, payload: UpdateProductRequest, session: SessionDep):
@@ -70,6 +76,7 @@ def update(product_id: UUID, payload: UpdateProductRequest, session: SessionDep)
     except IntegrityError:
         session.rollback()
         raise _sku_conflict()
+
 
 @router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete(product_id: UUID, session: SessionDep) -> None:

@@ -1,17 +1,22 @@
 from uuid import UUID
+
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+
 from diafragma.db.models import Product
 from diafragma.schemas.products.schemas import (
     CreateProductRequest,
     UpdateProductRequest,
 )
 
+
 class ProductNotFoundError(Exception):
     pass
 
+
 class InvalidRentalDaysError(Exception):
     pass
+
 
 def create_product(payload: CreateProductRequest, session: Session) -> Product:
     product = Product(**payload.model_dump())
@@ -19,15 +24,18 @@ def create_product(payload: CreateProductRequest, session: Session) -> Product:
     session.commit()
     return product
 
+
 def get_products(session: Session) -> list[Product]:
     stmt = select(Product).order_by(Product.name)
     return list(session.scalars(stmt))
+
 
 def get_product(product_id: UUID, session: Session) -> Product:
     product = session.get(Product, product_id)
     if product is None:
         raise ProductNotFoundError(product_id)
     return product
+
 
 def update_product(
     product_id: UUID,
@@ -50,6 +58,7 @@ def update_product(
         setattr(product, field, value)
     session.commit()
     return product
+
 
 def delete_product(product_id: UUID, session: Session) -> None:
     product = get_product(product_id, session)

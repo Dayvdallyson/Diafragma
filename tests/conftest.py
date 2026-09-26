@@ -1,4 +1,5 @@
 from collections.abc import Iterator
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import Engine, create_engine
@@ -11,6 +12,7 @@ from diafragma.db.dependencies import get_db
 from diafragma.main import app
 
 POSTGRES_IMAGE = "postgres:18-alpine"
+
 
 @pytest.fixture(scope="session")
 def engine() -> Iterator[Engine]:

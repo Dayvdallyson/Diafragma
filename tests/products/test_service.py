@@ -4,7 +4,10 @@ import pytest
 from sqlalchemy.exc import IntegrityError
 
 from diafragma.db.models import Product
-from diafragma.schemas.products.schemas import CreateProductRequest, UpdateProductRequest
+from diafragma.schemas.products.schemas import (
+    CreateProductRequest,
+    UpdateProductRequest,
+)
 from diafragma.services.products.service import (
     InvalidRentalDaysError,
     ProductNotFoundError,
@@ -28,6 +31,7 @@ CREATE_DATA = {
 
 
 # create
+
 
 def test_create_product_persists_all_fields(session):
     product = create_product(CreateProductRequest(**CREATE_DATA), session)
@@ -56,6 +60,7 @@ def test_create_product_duplicate_sku_raises_integrity_error(session, product):
 
 # get
 
+
 def test_get_product_returns_product(session, product):
     assert get_product(product.id, session).id == product.id
 
@@ -75,6 +80,7 @@ def test_get_products_ordered_by_name(session, make_product):
 
 
 # update
+
 
 def test_update_only_changes_sent_fields(session, product):
     update_product(product.id, UpdateProductRequest(name="Canon EOS R6 II"), session)
@@ -155,6 +161,7 @@ def test_update_duplicate_sku_raises_integrity_error(session, product, make_prod
 
 
 # delete
+
 
 def test_delete_product(session, product):
     product_id = product.id
