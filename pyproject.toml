@@ -12,10 +12,13 @@ dependencies = [
     "asyncpg>=0.31.0",
     "dotenv>=0.9.9",
     "fastapi[standard]>=0.141.1",
+    "httpx>=0.28.1",
     "psycopg[binary]>=3.3.6",
     "pydantic>=2.13.5",
+    "pytest>=9.1.1",
     "sqlalchemy>=2.1.0",
     "uuid7>=0.1.0",
+    "uvicorn>=0.53.0",
 ]
 
 [project.scripts]
@@ -24,3 +27,15 @@ diafragma = "diafragma:main"
 [build-system]
 requires = ["uv_build>=0.12.2,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.1",
+    "pytest>=9.1.1",
+    "testcontainers[postgres]>=4.15.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = ["--import-mode=importlib"]
