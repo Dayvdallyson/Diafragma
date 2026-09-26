@@ -42,3 +42,13 @@ class ProductResponse(BaseModel):
     min_rental_days: int
     max_rental_days: int
     created_at: datetime
+
+class UpdateProductRequest(BaseModel):
+    sku: str | None = None
+    name: str | None = None
+    brand: str | None = None
+    category: str | None = None
+    description: str | None = None
+    specification: dict[str, Any] | None = None
+    min_rental_days: int | None = None
+    max_rental_days: int | None = None

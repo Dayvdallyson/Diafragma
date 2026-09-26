@@ -1,11 +1,16 @@
+from uuid import UUID
+from fastapi import HTTPException
+from sqlalchemy import select
 from sqlalchemy.orm import Session
-
 from diafragma.db.models import Product
-from diafragma.schemas.products.schemas import CreateProductRequest
+from diafragma.schemas.products.schemas import (
+    CreateProductRequest,
+    UpdateProductRequest,
+)
 
 def create_product(
-    session: Session,
     payload: CreateProductRequest,
+    session: Session,
 ) -> Product:
     product = Product(
         sku=payload.sku,
@@ -24,11 +29,36 @@ def create_product(
 
     return product
 
-def get_product():
+def get_products(
+    session: Session,
+) -> list[Product]:
+    statement = select(Product)
+    return list(session.scalars(statement).all())
+
+def get_product(
+    id: UUID,
+    session: Session,
+) -> Product | None:
+    return session.get(Product, id)
+
+
+def update_product(
+    id: UUID,
+    data: UpdateProductRequest,
+):
     ...
 
-def update_product():
-    ...
+def delete_product(
+    id: UUID,
+    session: Session,
+) -> None:
+    product = session.get(Product, id)
 
-def delete_product():
-    ...
+    if product is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    session.delete(product)
+    session.commit()
