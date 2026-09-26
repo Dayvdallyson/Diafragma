@@ -5,7 +5,7 @@ from typing import Any
 import pytest
 from sqlalchemy.orm import Session
 
-from diafragma.db.models import Product
+from diafragma.models.products.models import Product
 
 
 @pytest.fixture

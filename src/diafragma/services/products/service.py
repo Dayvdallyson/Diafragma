@@ -3,7 +3,7 @@ from uuid import UUID
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from diafragma.db.models import Product
+from diafragma.models.products.models import Product
 from diafragma.schemas.products.schemas import (
     CreateProductRequest,
     UpdateProductRequest,

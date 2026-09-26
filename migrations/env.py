@@ -4,7 +4,7 @@ from logging.config import fileConfig
 from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-import diafragma.db.models  # noqa: F401 — registra as tabelas no Base.metadata
+import diafragma.models.products.models  # noqa: F401 — registra as tabelas no Base.metadata
 from diafragma.db.base import Base
 
 # this is the Alembic Config object, which provides

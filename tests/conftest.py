@@ -6,7 +6,7 @@ from sqlalchemy import Engine, create_engine
 from sqlalchemy.orm import Session
 from testcontainers.community.postgres import PostgresContainer
 
-import diafragma.db.models  # noqa: F401
+import diafragma.models.products.models  # noqa: F401
 from diafragma.db.base import Base
 from diafragma.db.dependencies import get_db
 from diafragma.main import app

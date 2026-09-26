@@ -3,7 +3,7 @@ import uuid
 import pytest
 from sqlalchemy.exc import IntegrityError
 
-from diafragma.db.models import Product
+from diafragma.models.products.models import Product
 from diafragma.schemas.products.schemas import (
     CreateProductRequest,
     UpdateProductRequest,
