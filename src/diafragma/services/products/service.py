@@ -9,7 +9,6 @@ from diafragma.schemas.products.schemas import (
     UpdateProductRequest,
 )
 
-
 class ProductNotFoundError(Exception):
     pass
 

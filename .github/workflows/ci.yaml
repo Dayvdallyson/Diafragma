@@ -53,6 +53,8 @@ jobs:
 
       - name: Run tests
         run: uv run pytest -v
+        env:
+          DATABASE_URL: postgresql+psycopg://unused@localhost/unused
 
   migrations:
     runs-on: ubuntu-latest
