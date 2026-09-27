@@ -16,7 +16,7 @@ from sqlalchemy import (
     func,
     text,
 )
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.dialects.postgresql import DATERANGE, JSONB, ExcludeConstraint, Range
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from diafragma.db.base import Base
@@ -147,6 +147,39 @@ class ProductPrice(Base):
     product: Mapped["Product"] = relationship(back_populates="prices")
 
 
+class UnitBlock(Base):
+    __tablename__ = "unit_block"
+    __table_args__ = (
+        ExcludeConstraint(
+            ("unit_id", "="),
+            ("period", "&&"),
+            name="unit_block_no_overlap",
+            using="gist",
+        ),
+        CheckConstraint(
+            "(reservation_item_id IS NULL) <> (maintenance_id IS NULL)",
+            name="exactly_one_source",
+        ),
+        CheckConstraint(
+            "NOT isempty(period) AND NOT lower_inf(period)",
+            name="period_valid",
+        ),
+    )
+
+    id: Mapped[UuidPk]
+    unit_id: Mapped[UUID] = mapped_column(ForeignKey("unit.id"))
+    period: Mapped[Range[Date]] = mapped_column(DATERANGE)
+    reservation_item_id: Mapped[UUID | None] = mapped_column(
+        ForeignKey("reservation_item.id", ondelete="CASCADE"), unique=True
+    )
+    maintenance_id: Mapped[UUID | None] = mapped_column(
+        ForeignKey("maintenance.id", ondelete="CASCADE"), unique=True
+    )
+    created_at: Mapped[CreatedAt]
+
+    unit: Mapped["Unit"] = relationship()
+
+
 class Unit(Base):
     __tablename__ = "unit"
     __table_args__ = (
@@ -200,7 +233,7 @@ class Maintenance(Base):
 class Reservation(Base):
     __tablename__ = "reservation"
     __table_args__ = (
-        CheckConstraint("ends_at > starts_at", name="valid_period"),
+        CheckConstraint("ends_on > starts_on", name="valid_period"),
         CheckConstraint(
             one_of(
                 "status",
@@ -216,7 +249,7 @@ class Reservation(Base):
             name="status_valid",
         ),
         CheckConstraint(
-            one_of("channel", ["web_voice", "phone", "whatsapp"]), name="channel_valid"
+            one_of("channel", ["web_voice", "phone", "telegram"]), name="channel_valid"
         ),
     )
 
@@ -224,8 +257,8 @@ class Reservation(Base):
     client_id: Mapped[UUID] = mapped_column(ForeignKey("client.id"))
     pickup_store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
     return_store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
-    starts_at: Mapped[Timestamp]
-    ends_at: Mapped[Timestamp]
+    starts_on: Mapped[date] = mapped_column(Date)
+    ends_on: Mapped[date] = mapped_column(Date)
     status: Mapped[str] = mapped_column(String(20), server_default="pending")
     expires_at: Mapped[Timestamp | None]
     picked_up_at: Mapped[Timestamp | None]
