@@ -40,3 +40,7 @@ dev = [
 testpaths = ["tests"]
 pythonpath = ["src"]
 addopts = ["--import-mode=importlib"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["diafragma"]
+known-third-party = ["alembic"]
