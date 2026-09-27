@@ -2,7 +2,7 @@ from collections.abc import Iterator
 
 import pytest
 from fastapi.testclient import TestClient
-from sqlalchemy import Engine, create_engine
+from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.orm import Session
 from testcontainers.community.postgres import PostgresContainer
 
@@ -19,6 +19,8 @@ def engine() -> Iterator[Engine]:
     with PostgresContainer(POSTGRES_IMAGE, driver="psycopg") as postgres:
         engine = create_engine(postgres.get_connection_url())
 
+        with engine.begin() as conn:
+            conn.execute(text("CREATE EXTENSION IF NOT EXISTS btree_gist"))
         Base.metadata.create_all(engine)
 
         yield engine
