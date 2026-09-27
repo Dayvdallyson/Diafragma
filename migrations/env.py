@@ -4,7 +4,7 @@ from logging.config import fileConfig
 from dotenv import load_dotenv
 from sqlalchemy import engine_from_config, pool
 
-import diafragma.models.products.models  # noqa: F401 — registra as tabelas no Base.metadata
+import diafragma.models.products.models  # noqa: F401
 from alembic import context
 from diafragma.db.base import Base
 
