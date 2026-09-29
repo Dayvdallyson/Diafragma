@@ -12,7 +12,4 @@ wheels/
 #env
 .env
 
-# seeds
-/seed_products.py
-/seed_admin.py
-/produtos.json
+

@@ -1,0 +1,3317 @@
+{
+  "stores": [
+    {
+      "key": "SP",
+      "name": "Diafragma São Paulo",
+      "country": "BR",
+      "city": "São Paulo",
+      "address": "Rua dos Pinheiros, 1200 - Pinheiros, São Paulo - SP, 05422-001",
+      "time_zone": "America/Sao_Paulo",
+      "currency": "BRL",
+      "phone": null
+    },
+    {
+      "key": "RJ",
+      "name": "Diafragma Rio de Janeiro",
+      "country": "BR",
+      "city": "Rio de Janeiro",
+      "address": "Rua Voluntários da Pátria, 300 - Botafogo, Rio de Janeiro - RJ, 22270-010",
+      "time_zone": "America/Sao_Paulo",
+      "currency": "BRL",
+      "phone": null
+    }
+  ],
+  "products": [
+    {
+      "sku": "CAM-ARRI-ALEXA35-001",
+      "name": "ARRI ALEXA 35",
+      "brand": "ARRI",
+      "category": "camera",
+      "description": "Câmera de cinema digital Super 35 com sensor 4.6K e 17 stops de latitude. Padrão em produções de longa-metragem, séries e publicidade de alto nível. Acompanha kit de baterias, cartões Codex e case rígido.",
+      "specifications": {
+        "sensor": "Super 35 4.6K ALEV 4 CMOS",
+        "resolucao_maxima": "4608 x 3164",
+        "latitude_dinamica": "17 stops",
+        "iso_base": "800",
+        "codecs": [
+          "ARRIRAW",
+          "Apple ProRes 4444 XQ",
+          "ProRes 422 HQ"
+        ],
+        "frame_rate_maximo": "120 fps",
+        "montagem": "LPL (adaptador PL incluso)",
+        "midia": "Codex Compact Drive",
+        "peso": "2,9 kg (corpo)",
+        "itens_inclusos": [
+          "2x Codex Compact Drive 1TB",
+          "4x baterias B-Mount",
+          "carregador duplo",
+          "visor MVF-2",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 650000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-ARRI-ALEXA35-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-ARRI-ALEXA35-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-RED-VRAPTOR-001",
+      "name": "RED V-RAPTOR 8K VV",
+      "brand": "RED",
+      "category": "camera",
+      "description": "Câmera cinema full frame 8K com sensor VistaVision e captura em REDCODE RAW. Corpo compacto e robusto, ideal para produções que exigem máxima resolução e flexibilidade na pós-produção.",
+      "specifications": {
+        "sensor": "8K VV 35,4 MP CMOS",
+        "resolucao_maxima": "8192 x 4320",
+        "latitude_dinamica": "17+ stops",
+        "codecs": [
+          "REDCODE RAW HQ",
+          "MQ",
+          "LQ",
+          "ELQ"
+        ],
+        "frame_rate_maximo": "120 fps em 8K / 600 fps em 2K",
+        "montagem": "RF (adaptador PL disponível)",
+        "midia": "CFexpress Tipo B",
+        "peso": "1,83 kg (corpo)",
+        "itens_inclusos": [
+          "2x CFexpress 660GB",
+          "3x baterias V-Mount",
+          "monitor DSMC3 7\"",
+          "top handle",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 350000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-RED-VRAPTOR-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-RED-VRAPTOR-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-SONY-FX6-001",
+      "name": "Sony FX6 Cinema Line",
+      "brand": "Sony",
+      "category": "camera",
+      "description": "Câmera cinema full frame compacta com filtro ND variável eletrônico e autofoco rápido. Excelente para documentários, eventos, run-and-gun e produções com equipes enxutas.",
+      "specifications": {
+        "sensor": "Full Frame 10,2 MP Exmor R CMOS",
+        "resolucao_maxima": "3840 x 2160 (4K UHD)",
+        "latitude_dinamica": "15+ stops",
+        "iso_base": "800 / 12.800 (dual base)",
+        "codecs": [
+          "XAVC-I",
+          "XAVC-L",
+          "RAW via SDI"
+        ],
+        "frame_rate_maximo": "120 fps em 4K / 240 fps em Full HD",
+        "filtro_nd": "Eletrônico variável 1/4 a 1/128",
+        "montagem": "Sony E-Mount",
+        "midia": "CFexpress Tipo A / SDXC",
+        "peso": "890 g (corpo)",
+        "itens_inclusos": [
+          "2x CFexpress Tipo A 160GB",
+          "3x baterias BP-U70",
+          "handle com XLR",
+          "monitor LCD",
+          "bolsa de transporte"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 85000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-FX6-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-FX6-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-FX6-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-SONY-FX6-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-SONY-FX6-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-CANON-C70-001",
+      "name": "Canon EOS C70",
+      "brand": "Canon",
+      "category": "camera",
+      "description": "Câmera cinema Super 35 no formato de mirrorless, com sensor DGO de alta latitude e ND embutido. Versátil para gimbal, drone rig e filmagens de mão.",
+      "specifications": {
+        "sensor": "Super 35 DGO 4K CMOS",
+        "resolucao_maxima": "4096 x 2160 (DCI 4K)",
+        "latitude_dinamica": "16+ stops",
+        "codecs": [
+          "Cinema RAW Light",
+          "XF-AVC",
+          "HEVC"
+        ],
+        "frame_rate_maximo": "120 fps em 4K / 180 fps em 2K",
+        "filtro_nd": "Embutido 2, 4, 6, 8, 10 stops",
+        "montagem": "Canon RF",
+        "midia": "2x SDXC UHS-II",
+        "peso": "1,17 kg",
+        "itens_inclusos": [
+          "2x SD 256GB V90",
+          "3x baterias BP-A60",
+          "adaptador EF-EOS R 0.71x",
+          "bolsa de transporte"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 60000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-CANON-C70-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-CANON-C70-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-CANON-C70-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-BMD-PYXIS6K-001",
+      "name": "Blackmagic PYXIS 6K",
+      "brand": "Blackmagic Design",
+      "category": "camera",
+      "description": "Câmera cinema full frame em formato box, extremamente modular, com gravação Blackmagic RAW. Ótimo custo-benefício para produções independentes e setups de múltiplas câmeras.",
+      "specifications": {
+        "sensor": "Full Frame 24,6 MP",
+        "resolucao_maxima": "6048 x 4032",
+        "latitude_dinamica": "13 stops",
+        "codecs": [
+          "Blackmagic RAW"
+        ],
+        "frame_rate_maximo": "36 fps em 6K / 120 fps em 4K janelado",
+        "montagem": "L-Mount",
+        "midia": "CFexpress Tipo B / SSD USB-C",
+        "peso": "1,1 kg",
+        "itens_inclusos": [
+          "2x CFexpress 512GB",
+          "4x baterias NP-F970",
+          "cage completo",
+          "monitor 5\"",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 90000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-BMD-PYXIS6K-001-SP-01",
+          "condition": "new",
+          "status": "active",
+          "acquired_at": "2025-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-BMD-PYXIS6K-001-SP-02",
+          "condition": "new",
+          "status": "active",
+          "acquired_at": "2025-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-BMD-PYXIS6K-001-RJ-01",
+          "condition": "new",
+          "status": "active",
+          "acquired_at": "2025-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-ARRI-SPRIME-KIT5",
+      "name": "Kit ARRI Signature Prime (5 lentes)",
+      "brand": "ARRI",
+      "category": "lens",
+      "description": "Conjunto de cinco lentes prime full frame com renderização suave e bokeh natural. Referência absoluta em produções cinematográficas premium.",
+      "specifications": {
+        "distancias_focais": [
+          "18mm",
+          "25mm",
+          "35mm",
+          "47mm",
+          "75mm"
+        ],
+        "abertura": "T1.8",
+        "cobertura": "Full Frame / LF (46,31 mm)",
+        "montagem": "LPL",
+        "metadados": "LDS-2",
+        "itens_inclusos": [
+          "5 lentes",
+          "tampas frontais e traseiras",
+          "case rígido acolchoado"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 600000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-ARRI-SPRIME-KIT5-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-SIGMA-CINE-KIT6",
+      "name": "Kit Sigma Cine FF High Speed Prime (6 lentes)",
+      "brand": "Sigma",
+      "category": "lens",
+      "description": "Kit de primes cinema full frame com abertura T1.5, construção robusta e marcações de foco precisas. Nitidez elevada e ótima consistência de cor entre as focais.",
+      "specifications": {
+        "distancias_focais": [
+          "20mm",
+          "24mm",
+          "35mm",
+          "50mm",
+          "85mm",
+          "105mm"
+        ],
+        "abertura": "T1.5",
+        "cobertura": "Full Frame",
+        "montagem": "PL (EF e E-Mount sob consulta)",
+        "diametro_frontal": "95 mm",
+        "itens_inclusos": [
+          "6 lentes",
+          "tampas",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 180000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-SIGMA-CINE-KIT6-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LEN-SIGMA-CINE-KIT6-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-SIGMA-CINE-KIT6-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-CANON-CNE-ZOOM-001",
+      "name": "Canon CN-E 30-105mm T2.8 L S",
+      "brand": "Canon",
+      "category": "lens",
+      "description": "Zoom cinema compacto Super 35 com parfocalidade e excelente desempenho óptico. Ideal para documentários, entrevistas e produções que exigem agilidade de enquadramento.",
+      "specifications": {
+        "distancia_focal": "30-105mm",
+        "abertura": "T2.8",
+        "cobertura": "Super 35",
+        "montagem": "PL",
+        "parfocal": true,
+        "peso": "2,2 kg",
+        "itens_inclusos": [
+          "lente",
+          "suporte de lente",
+          "tampas",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 80000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-CANON-CNE-ZOOM-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-CANON-CNE-ZOOM-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "STB-DJI-RONIN2-001",
+      "name": "DJI Ronin 2",
+      "brand": "DJI",
+      "category": "accessory",
+      "description": "Gimbal profissional de 3 eixos para câmeras de cinema pesadas. Pode ser usado em mãos, cabos, veículos e gruas, com modo de controle remoto e integração com follow focus.",
+      "specifications": {
+        "carga_maxima": "13,6 kg",
+        "eixos": 3,
+        "autonomia_bateria": "Até 8 horas",
+        "modos": [
+          "Underslung",
+          "Upright",
+          "Briefcase",
+          "Car Mount"
+        ],
+        "conectividade": [
+          "Bluetooth",
+          "2.4 GHz",
+          "SDI/HDMI passthrough"
+        ],
+        "itens_inclusos": [
+          "gimbal",
+          "grip",
+          "2x baterias TB50",
+          "carregador",
+          "controle remoto",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 120000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "STB-DJI-RONIN2-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "STB-DJI-RONIN2-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "STB-DJI-RS4PRO-001",
+      "name": "DJI RS 4 Pro Combo",
+      "brand": "DJI",
+      "category": "accessory",
+      "description": "Gimbal de mão para câmeras mirrorless e cinema compactas, com LiDAR para foco automático em lentes manuais e controle de câmera integrado.",
+      "specifications": {
+        "carga_maxima": "4,5 kg",
+        "eixos": 3,
+        "autonomia_bateria": "Até 13 horas",
+        "recursos": [
+          "LiDAR Focus",
+          "Transmissão de vídeo",
+          "Modo vertical nativo"
+        ],
+        "itens_inclusos": [
+          "gimbal",
+          "Focus Pro Motor",
+          "LiDAR",
+          "Transmissor de vídeo",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 35000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "STB-DJI-RS4PRO-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "STB-DJI-RS4PRO-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "STB-DJI-RS4PRO-001-SP-03",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "STB-DJI-RS4PRO-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "STB-DJI-RS4PRO-001-RJ-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "DRN-DJI-INSPIRE3-001",
+      "name": "DJI Inspire 3",
+      "brand": "DJI",
+      "category": "camera",
+      "description": "Drone cinema com câmera full frame 8K integrada (Zenmuse X9-8K Air). Ideal para tomadas aéreas de alto padrão. Locação disponível apenas para operadores com registro ANAC/DECEA válido.",
+      "specifications": {
+        "camera": "Zenmuse X9-8K Air Full Frame",
+        "resolucao_maxima": "8K 25fps / 4K 120fps",
+        "codecs": [
+          "ProRes RAW",
+          "CinemaDNG",
+          "ProRes 422 HQ"
+        ],
+        "tempo_de_voo": "Até 28 minutos",
+        "alcance_transmissao": "Até 15 km (O3 Pro)",
+        "velocidade_maxima": "94 km/h",
+        "itens_inclusos": [
+          "drone",
+          "câmera X9",
+          "2x controles RC Plus",
+          "8x baterias TB51",
+          "hub de carga",
+          "case rígido"
+        ],
+        "requisitos": "Operador habilitado com registro ANAC/SISANT"
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 15,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 350000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "DRN-DJI-INSPIRE3-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-APUTURE-600D-001",
+      "name": "Aputure LS 600d Pro",
+      "brand": "Aputure",
+      "category": "lighting",
+      "description": "Refletor LED daylight de alta potência, resistente a intempéries, capaz de substituir HMIs de 1200W. Ideal para externas, iluminação de grandes ambientes e simulação de luz solar.",
+      "specifications": {
+        "potencia": "600 W",
+        "temperatura_de_cor": "5600 K",
+        "cri_tlci": "CRI ≥ 96 / TLCI ≥ 96",
+        "montagem": "Bowens",
+        "controle": [
+          "DMX",
+          "App Sidus Link",
+          "Bluetooth"
+        ],
+        "resistencia": "IP54",
+        "itens_inclusos": [
+          "refletor",
+          "control box",
+          "refletor hiper",
+          "cabos",
+          "case com rodinhas"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 60000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-APUTURE-600D-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-APUTURE-600D-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-APUTURE-600D-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-APUTURE-600D-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-APUTURE-600D-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-ARRI-SKYPANEL-S60-001",
+      "name": "ARRI SkyPanel S60-C",
+      "brand": "ARRI",
+      "category": "lighting",
+      "description": "Painel LED soft com controle total de cor (RGBW), efeitos de luz embutidos e temperatura de cor ajustável. Padrão de mercado em sets de cinema e TV.",
+      "specifications": {
+        "potencia": "450 W",
+        "temperatura_de_cor": "2800 K a 10000 K",
+        "cor": "RGBW full color + controle de Hue/Saturation",
+        "cri": "≥ 95",
+        "controle": [
+          "DMX",
+          "LAN",
+          "Wireless DMX"
+        ],
+        "itens_inclusos": [
+          "painel",
+          "difusor standard",
+          "yoke",
+          "cabo de energia",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 70000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-ARRI-SKYPANEL-S60-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-ARRI-SKYPANEL-S60-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-ARRI-SKYPANEL-S60-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-ARRI-SKYPANEL-S60-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-ARRI-SKYPANEL-S60-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-ASTERA-TITAN-KIT8",
+      "name": "Kit Astera Titan Tube (8 unidades)",
+      "brand": "Astera",
+      "category": "lighting",
+      "description": "Kit com 8 tubos LED RGB sem fio, com bateria interna e controle via app. Perfeito para videoclipes, cenografia, efeitos práticos e iluminação criativa.",
+      "specifications": {
+        "quantidade": 8,
+        "comprimento": "1,03 m por tubo",
+        "cor": "RGBMA full color",
+        "autonomia_bateria": "Até 20 horas",
+        "controle": [
+          "App AsteraApp",
+          "CRMX",
+          "DMX"
+        ],
+        "itens_inclusos": [
+          "8 tubos",
+          "case de carregamento",
+          "AsteraBox",
+          "acessórios de fixação"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 120000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-ASTERA-TITAN-KIT8-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-ASTERA-TITAN-KIT8-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "AUD-SENNHEISER-MKH416-001",
+      "name": "Sennheiser MKH 416",
+      "brand": "Sennheiser",
+      "category": "audio",
+      "description": "Microfone shotgun supercardioide, referência em captação de diálogos em cinema e TV. Resistente a umidade e com excelente rejeição de ruído lateral.",
+      "specifications": {
+        "tipo": "Shotgun condensador RF",
+        "padrao_polar": "Supercardioide / Lobar",
+        "resposta_frequencia": "40 Hz - 20 kHz",
+        "alimentacao": "Phantom 48V",
+        "conector": "XLR-3",
+        "itens_inclusos": [
+          "microfone",
+          "shock mount",
+          "blimp com dead cat",
+          "cabo XLR",
+          "boom de carbono 3m"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 18000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-MKH416-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-MKH416-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-MKH416-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-08-12"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-MKH416-001-SP-04",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-SENNHEISER-MKH416-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-02-14"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-SENNHEISER-MKH416-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-05-15"
+        }
+      ]
+    },
+    {
+      "sku": "AUD-SOUNDDEVICES-MIXPRE10-001",
+      "name": "Sound Devices MixPre-10 II",
+      "brand": "Sound Devices",
+      "category": "audio",
+      "description": "Gravador e mixer de áudio profissional com 8 entradas XLR/TRS e gravação em 32-bit float. Timecode integrado para sincronismo com as câmeras.",
+      "specifications": {
+        "entradas": "8 XLR/TRS combo",
+        "gravacao": "32-bit float / até 192 kHz",
+        "timecode": "Sim, gerador e leitor",
+        "midia": "SD/SDHC/SDXC",
+        "itens_inclusos": [
+          "gravador",
+          "bolsa de produção",
+          "sled de baterias NP-F",
+          "4x baterias",
+          "SD 128GB"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 35000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "AUD-SOUNDDEVICES-MIXPRE10-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SOUNDDEVICES-MIXPRE10-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-SOUNDDEVICES-MIXPRE10-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "AUD-SENNHEISER-EWDP-KIT2",
+      "name": "Kit Sennheiser EW-DP (2 lapelas sem fio)",
+      "brand": "Sennheiser",
+      "category": "audio",
+      "description": "Sistema digital de microfones de lapela sem fio com dois transmissores e receptor para câmera. Captação limpa para entrevistas, documentários e eventos.",
+      "specifications": {
+        "canais": 2,
+        "tipo": "Digital UHF",
+        "alcance": "Até 100 m",
+        "microfone": "ME 2 omnidirecional",
+        "autonomia": "Até 8 horas",
+        "itens_inclusos": [
+          "2x transmissores bodypack",
+          "receptor EK",
+          "2x lapelas",
+          "baterias recarregáveis",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 30000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-EWDP-KIT2-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-EWDP-KIT2-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-EWDP-KIT2-SP-03",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-EWDP-KIT2-SP-04",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-SENNHEISER-EWDP-KIT2-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-14"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-SENNHEISER-EWDP-KIT2-RJ-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-15"
+        }
+      ]
+    },
+    {
+      "sku": "MON-ATOMOS-SHOGUN-001",
+      "name": "Atomos Shogun Ultra 7\"",
+      "brand": "Atomos",
+      "category": "accessory",
+      "description": "Monitor/gravador 7\" com brilho de 2000 nits, gravação ProRes RAW e ferramentas completas de exposição e foco. Ideal para diretores de fotografia e operadores de câmera.",
+      "specifications": {
+        "tamanho": "7 polegadas",
+        "brilho": "2000 nits",
+        "resolucao_tela": "1920 x 1200",
+        "entradas": [
+          "12G-SDI",
+          "HDMI 2.0"
+        ],
+        "gravacao": [
+          "ProRes RAW",
+          "ProRes",
+          "DNxHR",
+          "H.265"
+        ],
+        "ferramentas": [
+          "Waveform",
+          "False color",
+          "Focus peaking",
+          "LUTs 3D"
+        ],
+        "itens_inclusos": [
+          "monitor",
+          "SSD 1TB",
+          "2x baterias NP-F970",
+          "sunhood",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 35000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "MON-ATOMOS-SHOGUN-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "MON-ATOMOS-SHOGUN-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "MON-ATOMOS-SHOGUN-001-SP-03",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "MON-ATOMOS-SHOGUN-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "MON-ATOMOS-SHOGUN-001-RJ-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "MON-TERADEK-BOLT6-KIT",
+      "name": "Teradek Bolt 6 XT 750 (TX + RX)",
+      "brand": "Teradek",
+      "category": "accessory",
+      "description": "Sistema de transmissão de vídeo sem fio com latência zero e alcance de até 230 m. Essencial para video village, direção e foquista.",
+      "specifications": {
+        "alcance": "Até 230 m (linha de visão)",
+        "latencia": "< 1 ms",
+        "resolucao": "Até 4K 30p / 1080p 60",
+        "entradas": [
+          "3G-SDI",
+          "HDMI"
+        ],
+        "itens_inclusos": [
+          "transmissor",
+          "receptor",
+          "antenas",
+          "cabos",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 110000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "MON-TERADEK-BOLT6-KIT-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "MON-TERADEK-BOLT6-KIT-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "MON-TERADEK-BOLT6-KIT-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "SUP-SACHTLER-FSB8-001",
+      "name": "Tripé Sachtler Flowtech 75 + Cabeça FSB 8",
+      "brand": "Sachtler",
+      "category": "accessory",
+      "description": "Tripé de fibra de carbono com cabeça fluida de contrapeso, montagem rápida e movimentos suaves. Leve e resistente para câmeras de médio porte.",
+      "specifications": {
+        "carga_maxima": "8 kg",
+        "material": "Fibra de carbono",
+        "altura_maxima": "157 cm",
+        "altura_minima": "26 cm",
+        "base": "Bowl 75 mm",
+        "peso": "4,9 kg",
+        "itens_inclusos": [
+          "tripé",
+          "cabeça fluida",
+          "spreader de meio",
+          "bolsa acolchoada"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 25000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "SUP-SACHTLER-FSB8-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "SUP-SACHTLER-FSB8-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "SUP-SACHTLER-FSB8-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-08-12"
+        },
+        {
+          "store": "SP",
+          "serial_number": "SUP-SACHTLER-FSB8-001-SP-04",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "SUP-SACHTLER-FSB8-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-14"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "SUP-SACHTLER-FSB8-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-15"
+        }
+      ]
+    },
+    {
+      "sku": "ACC-TILTA-NUCLEUSM-001",
+      "name": "Tilta Nucleus-M Follow Focus Wireless",
+      "brand": "Tilta",
+      "category": "accessory",
+      "description": "Sistema de follow focus sem fio com controle de foco, íris e zoom. Permite ao foquista trabalhar à distância com precisão.",
+      "specifications": {
+        "motores": 2,
+        "alcance": "Até 300 m",
+        "controle": [
+          "Foco",
+          "Íris",
+          "Zoom"
+        ],
+        "compatibilidade": "Lentes cine e fotográficas com anel de engrenagem",
+        "itens_inclusos": [
+          "handwheel",
+          "2x motores",
+          "anéis de marcação",
+          "baterias",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 35000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "ACC-TILTA-NUCLEUSM-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "ACC-TILTA-NUCLEUSM-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "ACC-TILTA-NUCLEUSM-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "ACC-TILTA-NUCLEUSM-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "ACC-TILTA-NUCLEUSM-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "PWR-ANTON-VMOUNT-KIT4",
+      "name": "Kit Anton Bauer Titon 150 V-Mount (4 baterias)",
+      "brand": "Anton Bauer",
+      "category": "accessory",
+      "description": "Kit de quatro baterias V-Mount de 150Wh com carregador quádruplo. Autonomia para diárias longas com câmeras de cinema, monitores e luzes.",
+      "specifications": {
+        "quantidade": 4,
+        "capacidade": "150 Wh cada",
+        "saidas": [
+          "D-Tap",
+          "USB"
+        ],
+        "tempo_de_carga": "Aproximadamente 3 horas",
+        "transporte_aereo": "Permitido (abaixo de 160 Wh)",
+        "itens_inclusos": [
+          "4 baterias",
+          "carregador quádruplo",
+          "bolsa de transporte"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 25000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "PWR-ANTON-VMOUNT-KIT4-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "PWR-ANTON-VMOUNT-KIT4-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "PWR-ANTON-VMOUNT-KIT4-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        },
+        {
+          "store": "SP",
+          "serial_number": "PWR-ANTON-VMOUNT-KIT4-SP-04",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "PWR-ANTON-VMOUNT-KIT4-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-14"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "PWR-ANTON-VMOUNT-KIT4-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-15"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-ARRI-MINILF-001",
+      "name": "ARRI ALEXA Mini LF",
+      "brand": "ARRI",
+      "category": "camera",
+      "description": "Câmera cinema large format compacta, amplamente usada em longas, séries de streaming e publicidade. Combina o sensor LF com um corpo leve para gimbal, drone rig e steadicam.",
+      "specifications": {
+        "sensor": "Large Format ALEV 3 A3X",
+        "resolucao_maxima": "4448 x 3096",
+        "latitude_dinamica": "14+ stops",
+        "codecs": [
+          "ARRIRAW",
+          "Apple ProRes"
+        ],
+        "frame_rate_maximo": "90 fps",
+        "montagem": "LPL",
+        "midia": "Codex Compact Drive",
+        "peso": "2,6 kg",
+        "itens_inclusos": [
+          "2x Compact Drive 1TB",
+          "4x baterias B-Mount",
+          "visor MVF-2",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 450000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-ARRI-MINILF-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-ARRI-MINILF-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-SONY-VENICE2-001",
+      "name": "Sony VENICE 2 8K",
+      "brand": "Sony",
+      "category": "camera",
+      "description": "Câmera cinema full frame de topo com sensor 8.6K e filtros ND ópticos internos de 8 stops. Escolha frequente em grandes produções de cinema e séries premium.",
+      "specifications": {
+        "sensor": "Full Frame 8.6K CMOS",
+        "resolucao_maxima": "8640 x 5760",
+        "latitude_dinamica": "16 stops",
+        "iso_base": "800 / 3200 (dual base)",
+        "codecs": [
+          "X-OCN",
+          "ProRes 4444 XQ"
+        ],
+        "filtro_nd": "Óptico interno 0.3 a 2.4",
+        "montagem": "PL / E-Mount",
+        "midia": "AXS Card",
+        "itens_inclusos": [
+          "2x AXS 1TB",
+          "leitor AXS",
+          "visor DVF-EL200",
+          "4x baterias V-Mount",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 600000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-VENICE2-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-RED-KOMODOX-001",
+      "name": "RED KOMODO-X 6K",
+      "brand": "RED",
+      "category": "camera",
+      "description": "Câmera cinema Super 35 compacta com global shutter, eliminando distorções em movimentos rápidos. Ideal para ação, gimbal e drones.",
+      "specifications": {
+        "sensor": "Super 35 6K Global Shutter",
+        "resolucao_maxima": "6144 x 3240",
+        "latitude_dinamica": "16+ stops",
+        "codecs": [
+          "REDCODE RAW",
+          "ProRes"
+        ],
+        "frame_rate_maximo": "80 fps em 6K / 120 fps em 4K",
+        "montagem": "RF",
+        "midia": "CFexpress Tipo B",
+        "peso": "1,2 kg",
+        "itens_inclusos": [
+          "2x CFexpress 512GB",
+          "4x baterias V-Mount micro",
+          "monitor 7\"",
+          "cage",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 150000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-RED-KOMODOX-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-RED-KOMODOX-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-RED-KOMODOX-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-SONY-FX3-001",
+      "name": "Sony FX3 Cinema Line",
+      "brand": "Sony",
+      "category": "camera",
+      "description": "Câmera full frame compacta da linha Cinema, com excelente desempenho em baixa luz. Perfeita para conteúdo digital, videoclipes e produções ágeis.",
+      "specifications": {
+        "sensor": "Full Frame 12,1 MP",
+        "resolucao_maxima": "3840 x 2160",
+        "latitude_dinamica": "15+ stops",
+        "iso_base": "800 / 12.800",
+        "codecs": [
+          "XAVC S-I",
+          "XAVC HS",
+          "RAW via HDMI"
+        ],
+        "frame_rate_maximo": "120 fps em 4K",
+        "montagem": "Sony E-Mount",
+        "midia": "CFexpress Tipo A / SDXC",
+        "itens_inclusos": [
+          "2x CFexpress A 160GB",
+          "4x baterias NP-FZ100",
+          "handle XLR",
+          "cage"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 70000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-FX3-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-FX3-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-SONY-FX3-001-SP-03",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-SONY-FX3-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-SONY-FX3-001-RJ-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-CANON-C400-001",
+      "name": "Canon EOS C400",
+      "brand": "Canon",
+      "category": "camera",
+      "description": "Câmera cinema full frame 6K com triple base ISO, pensada para produções de alto nível que precisam de agilidade e integração com transmissão ao vivo.",
+      "specifications": {
+        "sensor": "Full Frame 6K BSI",
+        "resolucao_maxima": "6000 x 3164",
+        "latitude_dinamica": "16 stops",
+        "iso_base": "800 / 3200 / 12.800",
+        "codecs": [
+          "Cinema RAW Light",
+          "XF-AVC"
+        ],
+        "frame_rate_maximo": "60 fps em 6K / 180 fps em 2K",
+        "filtro_nd": "Embutido até 10 stops",
+        "montagem": "Canon RF",
+        "itens_inclusos": [
+          "2x CFexpress B 512GB",
+          "3x baterias BP-A60",
+          "monitor LM-V2",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 150000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-CANON-C400-001-SP-01",
+          "condition": "new",
+          "status": "active",
+          "acquired_at": "2025-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "CAM-CANON-C400-001-SP-02",
+          "condition": "new",
+          "status": "active",
+          "acquired_at": "2025-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-CANON-C400-001-RJ-01",
+          "condition": "new",
+          "status": "active",
+          "acquired_at": "2025-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "CAM-PANA-S1H-001",
+      "name": "Panasonic Lumix S1H",
+      "brand": "Panasonic",
+      "category": "camera",
+      "description": "Mirrorless full frame aprovada pela Netflix, com gravação 6K e V-Log. Opção robusta para produções independentes e B-cam.",
+      "specifications": {
+        "sensor": "Full Frame 24,2 MP",
+        "resolucao_maxima": "6K 24p / 4K 60p",
+        "latitude_dinamica": "14+ stops",
+        "codecs": [
+          "ProRes RAW via HDMI",
+          "H.265 10-bit"
+        ],
+        "montagem": "L-Mount",
+        "midia": "2x SDXC UHS-II",
+        "itens_inclusos": [
+          "2x SD 256GB",
+          "4x baterias",
+          "cage",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 45000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "CAM-PANA-S1H-001-SP-01",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2020-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "CAM-PANA-S1H-001-RJ-01",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2020-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-COOKE-S4I-KIT6",
+      "name": "Kit Cooke S4/i (6 lentes)",
+      "brand": "Cooke",
+      "category": "lens",
+      "description": "Primes Super 35 com o famoso 'Cooke Look': imagens calorosas, pele suave e transição de foco elegante. Clássico em cinema e publicidade.",
+      "specifications": {
+        "distancias_focais": [
+          "18mm",
+          "25mm",
+          "32mm",
+          "50mm",
+          "75mm",
+          "100mm"
+        ],
+        "abertura": "T2.0",
+        "cobertura": "Super 35",
+        "montagem": "PL",
+        "metadados": "Cooke /i",
+        "itens_inclusos": [
+          "6 lentes",
+          "tampas",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 350000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-COOKE-S4I-KIT6-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2019-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-COOKE-S4I-KIT6-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2019-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-ZEISS-SUPREME-KIT6",
+      "name": "Kit ZEISS Supreme Prime (6 lentes)",
+      "brand": "ZEISS",
+      "category": "lens",
+      "description": "Primes full frame leves, com imagem nítida porém suave e aberrações muito controladas. Consistência de cor e tamanho entre todas as focais.",
+      "specifications": {
+        "distancias_focais": [
+          "21mm",
+          "25mm",
+          "35mm",
+          "50mm",
+          "85mm",
+          "100mm"
+        ],
+        "abertura": "T1.5",
+        "cobertura": "Full Frame",
+        "montagem": "PL",
+        "metadados": "ZEISS eXtended Data",
+        "itens_inclusos": [
+          "6 lentes",
+          "tampas",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 400000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-ZEISS-SUPREME-KIT6-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-ZEISS-SUPREME-KIT6-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-ANGENIEUX-EZ1-001",
+      "name": "Angénieux Type EZ-1 30-90mm",
+      "brand": "Angénieux",
+      "category": "lens",
+      "description": "Zoom cinema com elementos traseiros intercambiáveis para cobrir Super 35 ou full frame. Ótica francesa com renderização cinematográfica.",
+      "specifications": {
+        "distancia_focal": "30-90mm (S35) / 45-135mm (FF)",
+        "abertura": "T2.0 (S35) / T3.0 (FF)",
+        "montagem": "PL / E / EF intercambiáveis",
+        "parfocal": true,
+        "peso": "2,1 kg",
+        "itens_inclusos": [
+          "lente",
+          "módulos traseiros S35 e FF",
+          "suporte",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 120000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-ANGENIEUX-EZ1-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-ANGENIEUX-EZ1-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-ATLAS-ORION-KIT5",
+      "name": "Kit Atlas Orion Anamórficas (5 lentes)",
+      "brand": "Atlas Lens Co.",
+      "category": "lens",
+      "description": "Lentes anamórficas 2x com flares horizontais azuis e bokeh oval característico. Para quem busca uma estética widescreen marcante.",
+      "specifications": {
+        "distancias_focais": [
+          "32mm",
+          "40mm",
+          "50mm",
+          "65mm",
+          "80mm"
+        ],
+        "abertura": "T2.0",
+        "squeeze": "2x",
+        "cobertura": "Super 35",
+        "montagem": "PL",
+        "itens_inclusos": [
+          "5 lentes",
+          "tampas",
+          "case rígido"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 250000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-ATLAS-ORION-KIT5-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-ATLAS-ORION-KIT5-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-SONY-GM-KIT3",
+      "name": "Kit Sony G Master (16-35 / 24-70 / 70-200)",
+      "brand": "Sony",
+      "category": "lens",
+      "description": "Trio de zooms G Master com autofoco rápido e silencioso. Cobre praticamente qualquer situação em câmeras Sony E-Mount.",
+      "specifications": {
+        "lentes": [
+          "FE 16-35mm f/2.8 GM II",
+          "FE 24-70mm f/2.8 GM II",
+          "FE 70-200mm f/2.8 GM OSS II"
+        ],
+        "abertura": "f/2.8",
+        "montagem": "Sony E-Mount",
+        "autofoco": true,
+        "itens_inclusos": [
+          "3 lentes",
+          "para-sóis",
+          "bolsa acolchoada"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 60000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-SONY-GM-KIT3-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LEN-SONY-GM-KIT3-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-SONY-GM-KIT3-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LEN-LAOWA-PROBE-001",
+      "name": "Laowa 24mm T14 Probe",
+      "brand": "Laowa",
+      "category": "lens",
+      "description": "Lente macro tipo periscópio com ponta à prova d'água. Cria planos inusitados em produtos, food e natureza, entrando em espaços muito pequenos.",
+      "specifications": {
+        "distancia_focal": "24mm",
+        "abertura": "T14",
+        "ampliacao": "2:1",
+        "resistencia": "Ponta à prova d'água",
+        "montagem": "PL / EF",
+        "itens_inclusos": [
+          "lente",
+          "luz LED de ponta",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 60000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LEN-LAOWA-PROBE-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LEN-LAOWA-PROBE-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "STB-EASYRIG-VARIO5-001",
+      "name": "Easyrig Vario 5",
+      "brand": "Easyrig",
+      "category": "accessory",
+      "description": "Colete de suporte que transfere o peso da câmera para o quadril, reduzindo o cansaço em diárias longas de câmera na mão.",
+      "specifications": {
+        "carga": "5 a 17 kg",
+        "ajuste": "Tensão variável",
+        "itens_inclusos": [
+          "colete",
+          "braço",
+          "gancho com amortecedor",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 30000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "STB-EASYRIG-VARIO5-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "STB-EASYRIG-VARIO5-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "STB-EASYRIG-VARIO5-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "STB-TILTA-FLOAT-001",
+      "name": "Tilta Float Sistema de Suporte para Gimbal",
+      "brand": "Tilta",
+      "category": "accessory",
+      "description": "Sistema com colete e braço estabilizador para gimbals, alivia peso e reduz o movimento vertical em planos de caminhada.",
+      "specifications": {
+        "carga": "Até 7 kg",
+        "compatibilidade": "DJI RS, Ronin e similares",
+        "itens_inclusos": [
+          "colete",
+          "braço",
+          "adaptadores",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 25000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "STB-TILTA-FLOAT-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "STB-TILTA-FLOAT-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "STB-TILTA-FLOAT-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "STB-DJI-FOCUSPRO-001",
+      "name": "DJI Focus Pro Kit Completo",
+      "brand": "DJI",
+      "category": "accessory",
+      "description": "Sistema de foco automático com LiDAR para lentes manuais, com handwheel e motor. Traz autofoco a lentes cine.",
+      "specifications": {
+        "alcance_lidar": "Até 20 m",
+        "componentes": [
+          "LiDAR",
+          "motor",
+          "handwheel",
+          "grip"
+        ],
+        "itens_inclusos": [
+          "kit completo",
+          "cabos",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 25000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "STB-DJI-FOCUSPRO-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "STB-DJI-FOCUSPRO-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "STB-DJI-FOCUSPRO-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "DRN-DJI-MAVIC3PRO-001",
+      "name": "DJI Mavic 3 Pro Cine",
+      "brand": "DJI",
+      "category": "camera",
+      "description": "Drone compacto com três câmeras e gravação Apple ProRes. Imagens aéreas de qualidade com logística simples. Requer operador habilitado.",
+      "specifications": {
+        "cameras": [
+          "Hasselblad 4/3 20MP",
+          "Tele média 70mm",
+          "Tele 166mm"
+        ],
+        "resolucao_maxima": "5.1K 50fps / 4K 120fps",
+        "codecs": [
+          "Apple ProRes 422 HQ",
+          "H.264",
+          "H.265"
+        ],
+        "tempo_de_voo": "Até 43 minutos",
+        "itens_inclusos": [
+          "drone",
+          "controle DJI RC Pro",
+          "3x baterias",
+          "hub de carga",
+          "filtros ND",
+          "bolsa"
+        ],
+        "requisitos": "Operador com registro ANAC/SISANT"
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 15,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 70000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "DRN-DJI-MAVIC3PRO-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "DRN-DJI-MAVIC3PRO-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "DRN-DJI-MAVIC3PRO-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "DRN-DJI-AVATA2-001",
+      "name": "DJI Avata 2 FPV",
+      "brand": "DJI",
+      "category": "camera",
+      "description": "Drone FPV compacto para planos imersivos e dinâmicos, como voos por dentro de ambientes e perseguições. Acompanha óculos e controle de movimento.",
+      "specifications": {
+        "resolucao_maxima": "4K 60fps",
+        "campo_de_visao": "155°",
+        "tempo_de_voo": "Até 23 minutos",
+        "itens_inclusos": [
+          "drone",
+          "DJI Goggles 3",
+          "RC Motion 3",
+          "3x baterias",
+          "hub de carga"
+        ],
+        "requisitos": "Operador com registro ANAC/SISANT"
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 15,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 35000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "DRN-DJI-AVATA2-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "DRN-DJI-AVATA2-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "DRN-DJI-AVATA2-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-ARRI-ORBITER-001",
+      "name": "ARRI Orbiter",
+      "brand": "ARRI",
+      "category": "lighting",
+      "description": "Refletor LED full color de alta potência com ópticas intercambiáveis (fresnel, open face, softbox). Um único aparelho para várias funções no set.",
+      "specifications": {
+        "potencia": "500 W",
+        "temperatura_de_cor": "2000 K a 20000 K",
+        "cor": "Espectro RGBACL",
+        "controle": [
+          "DMX",
+          "CRMX",
+          "LAN"
+        ],
+        "itens_inclusos": [
+          "refletor",
+          "óptica open face 30°",
+          "dome",
+          "cabos",
+          "case com rodinhas"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 90000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-ARRI-ORBITER-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-ARRI-ORBITER-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-ARRI-ORBITER-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-NANLUX-EVOKE1200-001",
+      "name": "Nanlux Evoke 1200B",
+      "brand": "Nanlux",
+      "category": "lighting",
+      "description": "LED bicolor de 1200W, alternativa potente aos HMIs de 1800W. Para grandes externas e simulação de sol em estúdio.",
+      "specifications": {
+        "potencia": "1200 W",
+        "temperatura_de_cor": "2700 K a 6500 K",
+        "cri": "≥ 96",
+        "resistencia": "IP55",
+        "controle": [
+          "DMX",
+          "App NANLINK"
+        ],
+        "itens_inclusos": [
+          "refletor",
+          "control box",
+          "refletor 45°",
+          "cabos",
+          "case com rodinhas"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 140000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-NANLUX-EVOKE1200-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-NANLUX-EVOKE1200-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-NANLUX-EVOKE1200-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-APUTURE-P600C-001",
+      "name": "Aputure Nova P600c",
+      "brand": "Aputure",
+      "category": "lighting",
+      "description": "Painel LED RGBWW de alta potência com difusão uniforme. Ideal como luz principal suave ou fundo colorido.",
+      "specifications": {
+        "potencia": "600 W",
+        "temperatura_de_cor": "2300 K a 10000 K",
+        "cor": "RGBWW full color",
+        "controle": [
+          "DMX",
+          "Sidus Link"
+        ],
+        "itens_inclusos": [
+          "painel",
+          "control box",
+          "yoke",
+          "difusor",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 70000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-APUTURE-P600C-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-APUTURE-P600C-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-APUTURE-P600C-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-AMARAN-300C-KIT3",
+      "name": "Kit Amaran 300c (3 unidades)",
+      "brand": "Aputure",
+      "category": "lighting",
+      "description": "Kit com três refletores RGB compactos, ideal para iluminação de três pontos em entrevistas, podcasts e YouTube.",
+      "specifications": {
+        "quantidade": 3,
+        "potencia": "300 W cada",
+        "cor": "RGBWW",
+        "montagem": "Bowens",
+        "itens_inclusos": [
+          "3 refletores",
+          "3 softboxes Light Dome",
+          "3 tripés de luz",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 45000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-AMARAN-300C-KIT3-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-AMARAN-300C-KIT3-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-AMARAN-300C-KIT3-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-AMARAN-300C-KIT3-RJ-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-11-13"
+        }
+      ]
+    },
+    {
+      "sku": "LGT-MATTHEWS-GRIP-KIT",
+      "name": "Kit Grip Completo (C-stands, bandeiras, difusores)",
+      "brand": "Matthews",
+      "category": "lighting",
+      "description": "Kit de maquinaria para modelar a luz: C-stands, bandeiras, frames de difusão e sacos de areia. Essencial para qualquer set profissional.",
+      "specifications": {
+        "itens_inclusos": [
+          "6x C-stands 40\"",
+          "4x bandeiras 18x24",
+          "frame 6x6 com difusão e grid",
+          "4x sacos de areia",
+          "braços e grampos variados"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 40000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "LGT-MATTHEWS-GRIP-KIT-SP-01",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2019-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "LGT-MATTHEWS-GRIP-KIT-SP-02",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2019-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "LGT-MATTHEWS-GRIP-KIT-RJ-01",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2019-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "AUD-SENNHEISER-MKH50-001",
+      "name": "Sennheiser MKH 50",
+      "brand": "Sennheiser",
+      "category": "audio",
+      "description": "Microfone supercardioide de pequeno diafragma, preferido para diálogos em interiores pela resposta natural e baixo ruído.",
+      "specifications": {
+        "tipo": "Condensador RF",
+        "padrao_polar": "Supercardioide",
+        "resposta_frequencia": "40 Hz - 20 kHz",
+        "alimentacao": "Phantom 48V",
+        "itens_inclusos": [
+          "microfone",
+          "shock mount",
+          "espuma",
+          "boom 3m",
+          "cabo XLR"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 18000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-MKH50-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-SENNHEISER-MKH50-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-SENNHEISER-MKH50-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2020-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "AUD-ZAXCOM-NOVA2-001",
+      "name": "Zaxcom Nova 2",
+      "brand": "Zaxcom",
+      "category": "audio",
+      "description": "Gravador/mixer multicanal para som direto em cinema e séries, com receptores sem fio integrados.",
+      "specifications": {
+        "canais": "Até 12 faixas",
+        "gravacao": "24-bit / 48 kHz",
+        "timecode": "Sim",
+        "itens_inclusos": [
+          "gravador",
+          "bolsa de produção",
+          "baterias",
+          "cartões de memória"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 80000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "AUD-ZAXCOM-NOVA2-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-ZAXCOM-NOVA2-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "AUD-DEITY-TC1-KIT3",
+      "name": "Kit Deity TC-1 Timecode (3 unidades)",
+      "brand": "Deity",
+      "category": "audio",
+      "description": "Geradores de timecode sem fio para sincronizar câmeras e gravadores automaticamente, economizando horas na pós-produção.",
+      "specifications": {
+        "quantidade": 3,
+        "precisao": "Deriva < 1 frame em 24 h",
+        "conectividade": "Bluetooth / App",
+        "itens_inclusos": [
+          "3 unidades",
+          "cabos",
+          "case de carregamento"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 18000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "AUD-DEITY-TC1-KIT3-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-DEITY-TC1-KIT3-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        },
+        {
+          "store": "SP",
+          "serial_number": "AUD-DEITY-TC1-KIT3-SP-03",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-DEITY-TC1-KIT3-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-11-13"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "AUD-DEITY-TC1-KIT3-RJ-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-14"
+        }
+      ]
+    },
+    {
+      "sku": "MON-SMALLHD-CINE13-001",
+      "name": "SmallHD Cine 13 4K",
+      "brand": "SmallHD",
+      "category": "accessory",
+      "description": "Monitor de produção 13\" 4K para diretores e video village, com brilho alto e ferramentas avançadas de análise de imagem.",
+      "specifications": {
+        "tamanho": "13 polegadas",
+        "resolucao_tela": "3840 x 2160",
+        "brilho": "1500 nits",
+        "entradas": [
+          "12G-SDI",
+          "HDMI 2.0"
+        ],
+        "itens_inclusos": [
+          "monitor",
+          "sunhood",
+          "tripé de monitor",
+          "cabos",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 50000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "MON-SMALLHD-CINE13-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "MON-SMALLHD-CINE13-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "MON-SMALLHD-CINE13-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "MON-HOLLYLAND-PYRO7-KIT",
+      "name": "Hollyland Pyro 7 Kit (monitor + TX)",
+      "brand": "Hollyland",
+      "category": "accessory",
+      "description": "Monitor 7\" com receptor integrado e transmissor dedicado. Solução compacta para acompanhamento sem fio em produções menores.",
+      "specifications": {
+        "tamanho": "7 polegadas",
+        "alcance": "Até 400 m",
+        "latencia": "50 ms",
+        "itens_inclusos": [
+          "monitor receptor",
+          "transmissor",
+          "baterias",
+          "case"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 40000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "MON-HOLLYLAND-PYRO7-KIT-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "MON-HOLLYLAND-PYRO7-KIT-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "MON-HOLLYLAND-PYRO7-KIT-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "MON-HOLLYLAND-PYRO7-KIT-RJ-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-11-13"
+        }
+      ]
+    },
+    {
+      "sku": "SUP-OCONNOR-2575-001",
+      "name": "Cabeça O'Connor 2575D + Tripé",
+      "brand": "O'Connor",
+      "category": "accessory",
+      "description": "Cabeça fluida de alta carga para câmeras de cinema pesadas, com contrabalanço preciso e movimentos extremamente suaves.",
+      "specifications": {
+        "carga_maxima": "41 kg",
+        "base": "Mitchell / Bowl 150 mm",
+        "inclinacao": "±90°",
+        "itens_inclusos": [
+          "cabeça fluida",
+          "tripé de carbono",
+          "hi-hat",
+          "baby legs",
+          "case"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 90000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "SUP-OCONNOR-2575-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2019-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "SUP-OCONNOR-2575-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2019-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "SUP-DANA-DOLLY-001",
+      "name": "Dana Dolly Kit Completo",
+      "brand": "Dana Dolly",
+      "category": "accessory",
+      "description": "Dolly portátil com trilhos, montagem rápida e travellings suaves. Movimentos de câmera cinematográficos em qualquer locação.",
+      "specifications": {
+        "comprimento_trilho": "Até 3,6 m",
+        "carga_maxima": "Até 45 kg",
+        "itens_inclusos": [
+          "dolly",
+          "2 trilhos de 1,8 m",
+          "2 suportes",
+          "bolsa de transporte"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 45000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "SUP-DANA-DOLLY-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "SUP-DANA-DOLLY-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "SUP-DANA-DOLLY-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "SUP-EDELKRONE-SLIDER-001",
+      "name": "Edelkrone SliderPLUS PRO Motorizado",
+      "brand": "Edelkrone",
+      "category": "accessory",
+      "description": "Slider compacto motorizado com controle via app. Ideal para produtos, timelapses e movimentos repetíveis.",
+      "specifications": {
+        "curso": "Até 75 cm",
+        "carga_maxima": "Até 9 kg",
+        "motorizacao": "HeadPLUS e Slide Module",
+        "itens_inclusos": [
+          "slider",
+          "módulos motorizados",
+          "bateria",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 35000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "SUP-EDELKRONE-SLIDER-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "SUP-EDELKRONE-SLIDER-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "SUP-PROAIM-JIB18-001",
+      "name": "Grua Proaim 18ft",
+      "brand": "Proaim",
+      "category": "accessory",
+      "description": "Grua de câmera de 5,5 m com cabeça remota de 2 eixos. Para planos elevados e movimentos amplos em eventos e produções.",
+      "specifications": {
+        "alcance": "5,5 m",
+        "carga_maxima": "Até 15 kg",
+        "cabeca": "Remota 2 eixos",
+        "itens_inclusos": [
+          "braço",
+          "tripé de base",
+          "contrapesos",
+          "cabeça remota",
+          "controle",
+          "monitor"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 80000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "SUP-PROAIM-JIB18-001-SP-01",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2020-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "SUP-PROAIM-JIB18-001-RJ-01",
+          "condition": "fair",
+          "status": "active",
+          "acquired_at": "2020-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "ACC-ARRI-HI5-KIT",
+      "name": "ARRI Hi-5 + cforce mini (sistema de foco)",
+      "brand": "ARRI",
+      "category": "accessory",
+      "description": "Sistema de controle de lentes sem fio de referência em cinema, com handwheel Hi-5 e motores cforce mini.",
+      "specifications": {
+        "motores": 3,
+        "controle": [
+          "Foco",
+          "Íris",
+          "Zoom"
+        ],
+        "frequencias": "2.4 GHz e 900 MHz",
+        "itens_inclusos": [
+          "Hi-5",
+          "3x cforce mini",
+          "RIA-1",
+          "cabos",
+          "case"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 120000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "ACC-ARRI-HI5-KIT-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "ACC-ARRI-HI5-KIT-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2023-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "ACC-TIFFEN-FILTROS-KIT8",
+      "name": "Kit Filtros Tiffen 4x5.65 (8 filtros)",
+      "brand": "Tiffen",
+      "category": "accessory",
+      "description": "Filtros de densidade neutra e efeito para matte box, para controlar a exposição e criar estilos de imagem.",
+      "specifications": {
+        "formato": "4x5.65 polegadas",
+        "filtros": [
+          "ND 0.3",
+          "ND 0.6",
+          "ND 0.9",
+          "ND 1.2",
+          "ND 1.5",
+          "ND 1.8",
+          "Black Pro-Mist 1/4",
+          "Polarizador"
+        ],
+        "itens_inclusos": [
+          "8 filtros",
+          "case acolchoado"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 30000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "ACC-TIFFEN-FILTROS-KIT8-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "ACC-TIFFEN-FILTROS-KIT8-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "ACC-TIFFEN-FILTROS-KIT8-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "ACC-BRIGHTTANGERINE-MB-001",
+      "name": "Matte Box Bright Tangerine Misfit Kick",
+      "brand": "Bright Tangerine",
+      "category": "accessory",
+      "description": "Matte box leve com bandeiras laterais e suporte para dois filtros, controla reflexos e flares.",
+      "specifications": {
+        "formato_filtro": "4x5.65",
+        "estagios": 2,
+        "itens_inclusos": [
+          "matte box",
+          "bandeiras",
+          "anéis adaptadores",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 25000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "ACC-BRIGHTTANGERINE-MB-001-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "ACC-BRIGHTTANGERINE-MB-001-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "ACC-BRIGHTTANGERINE-MB-001-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2021-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "ACC-DIT-STATION-001",
+      "name": "Estação DIT Completa",
+      "brand": "Multimarcas",
+      "category": "accessory",
+      "description": "Carrinho DIT com MacBook Pro, monitor de referência, leitores de cartão e armazenamento RAID para backup e checagem de material no set.",
+      "specifications": {
+        "computador": "MacBook Pro 16\"",
+        "monitor": "Referência 24\" calibrado",
+        "armazenamento": "RAID 48TB Thunderbolt",
+        "softwares": [
+          "DaVinci Resolve Studio",
+          "Silverstack"
+        ],
+        "itens_inclusos": [
+          "carrinho",
+          "computador",
+          "monitor",
+          "RAID",
+          "leitores CFexpress/SD/AXS/Codex",
+          "nobreak"
+        ]
+      },
+      "min_rental_days": 2,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 150000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "ACC-DIT-STATION-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "ACC-DIT-STATION-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        }
+      ]
+    },
+    {
+      "sku": "PWR-CORESWX-GOLD-KIT4",
+      "name": "Kit Core SWX Fleet Gold Mount (4 baterias)",
+      "brand": "Core SWX",
+      "category": "accessory",
+      "description": "Baterias Gold Mount de 150Wh com carregador quádruplo, para câmeras e acessórios configurados em Gold Mount.",
+      "specifications": {
+        "quantidade": 4,
+        "capacidade": "150 Wh cada",
+        "saidas": [
+          "D-Tap",
+          "USB"
+        ],
+        "itens_inclusos": [
+          "4 baterias",
+          "carregador quádruplo",
+          "bolsa"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 30,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 25000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "PWR-CORESWX-GOLD-KIT4-SP-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "PWR-CORESWX-GOLD-KIT4-SP-02",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "PWR-CORESWX-GOLD-KIT4-RJ-01",
+          "condition": "good",
+          "status": "active",
+          "acquired_at": "2022-08-12"
+        }
+      ]
+    },
+    {
+      "sku": "PWR-ECOFLOW-DELTAPRO-001",
+      "name": "EcoFlow Delta Pro (estação de energia)",
+      "brand": "EcoFlow",
+      "category": "accessory",
+      "description": "Estação de energia portátil de 3,6 kWh para alimentar luzes, monitores e carregadores em locações sem energia elétrica.",
+      "specifications": {
+        "capacidade": "3600 Wh",
+        "saida_ac": "3600 W",
+        "tomadas": "5 AC + USB + DC",
+        "tempo_de_carga": "Aprox. 2,7 h (AC)",
+        "itens_inclusos": [
+          "estação",
+          "cabo de carga",
+          "cabo de carro"
+        ]
+      },
+      "min_rental_days": 1,
+      "max_rental_days": 15,
+      "prices": [
+        {
+          "country": "BR",
+          "currency": "BRL",
+          "daily_rate_cents": 40000
+        }
+      ],
+      "units": [
+        {
+          "store": "SP",
+          "serial_number": "PWR-ECOFLOW-DELTAPRO-001-SP-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-02-10"
+        },
+        {
+          "store": "SP",
+          "serial_number": "PWR-ECOFLOW-DELTAPRO-001-SP-02",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-05-11"
+        },
+        {
+          "store": "RJ",
+          "serial_number": "PWR-ECOFLOW-DELTAPRO-001-RJ-01",
+          "condition": "excellent",
+          "status": "active",
+          "acquired_at": "2024-08-12"
+        }
+      ]
+    }
+  ]
+}
