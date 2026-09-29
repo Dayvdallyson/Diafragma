@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+env:
+  SECRET_KEY: ci-secret-not-for-production
+
 permissions:
   contents: read
 
