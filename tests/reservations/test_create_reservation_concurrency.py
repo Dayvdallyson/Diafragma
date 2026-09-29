@@ -1,6 +1,5 @@
 import threading
 from collections.abc import Callable
-from datetime import date
 from uuid import UUID
 
 import pytest
@@ -20,9 +19,9 @@ from diafragma.services.reservations.service import (
     UnitUnavailableError,
     create_reservation,
 )
+from tests.reservations.conftest import ENDS_ON, STARTS_ON, STORE_TIME_ZONE
 
 N_WORKERS = 20
-STARTS_ON, ENDS_ON = date(2026, 10, 1), date(2026, 10, 4)
 UNAVAILABLE = "unavailable"
 
 
@@ -36,7 +35,7 @@ def make_catalog(race_engine: Engine) -> Callable[[int], dict[str, UUID]]:
                 country="BR",
                 city="São Paulo",
                 address="Rua Teste, 1",
-                time_zone="America/Sao_Paulo",
+                time_zone=STORE_TIME_ZONE,
                 currency="BRL",
             )
             product = Product(
