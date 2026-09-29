@@ -3,9 +3,21 @@ from collections.abc import Callable
 from typing import Any
 
 import pytest
+from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
+from diafragma.auth.dependencies import require_admin
+from diafragma.main import app
 from diafragma.models.products.models import Product
+from diafragma.models.users.models import User, UserRole
+
+
+@pytest.fixture
+def client(client: TestClient):
+    fake_admin = User(name="Admin Test", email="admin@test.com", role=UserRole.ADMIN)
+    app.dependency_overrides[require_admin] = lambda: fake_admin
+    yield client
+    app.dependency_overrides.pop(require_admin, None)
 
 
 @pytest.fixture

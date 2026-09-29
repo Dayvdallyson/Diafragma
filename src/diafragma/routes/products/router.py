@@ -1,11 +1,10 @@
-from typing import Annotated
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy.orm import Session
 
-from diafragma.db.dependencies import get_db
+from diafragma.auth.dependencies import require_admin
+from diafragma.db.dependencies import SessionDep
 from diafragma.schemas.products.schemas import (
     CreateProductRequest,
     ProductResponse,
@@ -23,8 +22,6 @@ from diafragma.services.products.service import (
 
 router = APIRouter(prefix="/products", tags=["products"])
 
-SessionDep = Annotated[Session, Depends(get_db)]
-
 
 def _not_found() -> HTTPException:
     return HTTPException(
@@ -40,7 +37,12 @@ def _sku_conflict() -> HTTPException:
     )
 
 
-@router.post("", response_model=ProductResponse, status_code=status.HTTP_201_CREATED)
+@router.post(
+    "",
+    response_model=ProductResponse,
+    status_code=status.HTTP_201_CREATED,
+    dependencies=[Depends(require_admin)],
+)
 def create(payload: CreateProductRequest, session: SessionDep):
     try:
         return create_product(payload, session)
@@ -62,7 +64,11 @@ def get(product_id: UUID, session: SessionDep):
         raise _not_found()
 
 
-@router.patch("/{product_id}", response_model=ProductResponse)
+@router.patch(
+    "/{product_id}",
+    response_model=ProductResponse,
+    dependencies=[Depends(require_admin)],
+)
 def update(product_id: UUID, payload: UpdateProductRequest, session: SessionDep):
     try:
         return update_product(product_id, payload, session)
@@ -78,7 +84,11 @@ def update(product_id: UUID, payload: UpdateProductRequest, session: SessionDep)
         raise _sku_conflict()
 
 
-@router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete(
+    "/{product_id}",
+    status_code=status.HTTP_204_NO_CONTENT,
+    dependencies=[Depends(require_admin)],
+)
 def delete(product_id: UUID, session: SessionDep) -> None:
     try:
         delete_product(product_id, session)

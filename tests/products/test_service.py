@@ -30,7 +30,7 @@ CREATE_DATA = {
 }
 
 
-# create
+# CREATE
 
 
 def test_create_product_persists_all_fields(session):
@@ -58,7 +58,7 @@ def test_create_product_duplicate_sku_raises_integrity_error(session, product):
         create_product(payload, session)
 
 
-# get
+# GET
 
 
 def test_get_product_returns_product(session, product):
@@ -79,7 +79,7 @@ def test_get_products_ordered_by_name(session, make_product):
     assert names == ["Alfa", "Zeta"]
 
 
-# update
+# UPDATE
 
 
 def test_update_only_changes_sent_fields(session, product):
@@ -160,7 +160,7 @@ def test_update_duplicate_sku_raises_integrity_error(session, product, make_prod
         update_product(other.id, UpdateProductRequest(sku="CAM-001"), session)
 
 
-# delete
+# DELETE
 
 
 def test_delete_product(session, product):
