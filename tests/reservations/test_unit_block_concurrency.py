@@ -1,16 +1,14 @@
 import threading
-from collections.abc import Iterator
 from datetime import UTC, date, datetime, timedelta
 from uuid import UUID
 
 import pytest
 from psycopg import errors as pg_errors
-from sqlalchemy import Engine, create_engine, text
+from sqlalchemy import Engine
 from sqlalchemy.dialects.postgresql import Range
 from sqlalchemy.exc import DBAPIError
 from sqlalchemy.orm import Session
 
-from diafragma.db.base import Base
 from diafragma.models.products.models import (
     Maintenance,
     Product,
@@ -25,14 +23,7 @@ CONFLICT_ERRORS = (pg_errors.ExclusionViolation, pg_errors.DeadlockDetected)
 
 
 @pytest.fixture
-def race_engine(engine: Engine) -> Iterator[Engine]:
-    race_engine = create_engine(engine.url, pool_size=N_WORKERS + 2, max_overflow=0)
-    yield race_engine
-    race_engine.dispose()
-
-
-@pytest.fixture
-def unit_id(race_engine: Engine) -> Iterator[UUID]:
+def unit_id(race_engine: Engine) -> UUID:
     with Session(race_engine) as s:
         store = Store(
             name="Loja Teste",
@@ -56,13 +47,7 @@ def unit_id(race_engine: Engine) -> Iterator[UUID]:
         )
         s.add(unit)
         s.commit()
-        created_id = unit.id
-
-    yield created_id
-
-    tables = ", ".join(f'"{t.name}"' for t in Base.metadata.sorted_tables)
-    with race_engine.begin() as conn:
-        conn.execute(text(f"TRUNCATE {tables} CASCADE"))
+        return unit.id
 
 
 def _block_concurrently(
