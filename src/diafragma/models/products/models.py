@@ -1,14 +1,12 @@
 from datetime import date, datetime
-from typing import Annotated, Any
+from typing import Any
 from uuid import UUID
 
 from sqlalchemy import (
-    BigInteger,
     CheckConstraint,
     Date,
     DateTime,
     ForeignKey,
-    Integer,
     SmallInteger,
     String,
     Text,
@@ -20,46 +18,16 @@ from sqlalchemy.dialects.postgresql import DATERANGE, JSONB, ExcludeConstraint, 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from diafragma.db.base import Base
-
-UuidPk = Annotated[
-    UUID, mapped_column(primary_key=True, server_default=text("uuidv7()"))
-]
-CreatedAt = Annotated[
-    datetime, mapped_column(DateTime(timezone=True), server_default=func.now())
-]
-Timestamp = Annotated[datetime, mapped_column(DateTime(timezone=True))]
-CountryCode = Annotated[str, mapped_column(String(2))]
-CurrencyCode = Annotated[str, mapped_column(String(3))]
-Cents = Annotated[int, mapped_column(BigInteger)]
-
-
-def one_of(column: str, values: list[str]) -> str:
-    options = ", ".join(f"'{v}'" for v in values)
-    return f"{column} IN ({options})"
-
-
-class Client(Base):
-    __tablename__ = "client"
-    __table_args__ = (
-        CheckConstraint(r"phone ~ '^\+[1-9][0-9]{7,14}$'", name="phone_e164"),
-        UniqueConstraint("document_country", "document_type", "document_number"),
-    )
-
-    id: Mapped[UuidPk]
-    phone: Mapped[str] = mapped_column(String(16), unique=True)
-    name: Mapped[str | None] = mapped_column(String(200))
-    birth_date: Mapped[date | None] = mapped_column(Date)
-    email: Mapped[str | None] = mapped_column(String(254), unique=True)
-    country: Mapped[CountryCode | None]
-    city: Mapped[str | None] = mapped_column(String(100))
-    language: Mapped[str] = mapped_column(String(10), server_default="pt-BR")
-    document_type: Mapped[str | None] = mapped_column(String(20))
-    document_number: Mapped[str | None] = mapped_column(String(50))
-    document_country: Mapped[CountryCode | None]
-    reliability_points: Mapped[int] = mapped_column(Integer, server_default="0")
-    created_at: Mapped[CreatedAt]
-
-    reservations: Mapped[list["Reservation"]] = relationship(back_populates="client")
+from diafragma.db.types import (
+    Cents,
+    CountryCode,
+    CreatedAt,
+    CurrencyCode,
+    Timestamp,
+    UuidPk,
+    one_of,
+)
+from diafragma.models.users.models import User
 
 
 class Store(Base):
@@ -251,10 +219,13 @@ class Reservation(Base):
         CheckConstraint(
             one_of("channel", ["web_voice", "phone", "telegram"]), name="channel_valid"
         ),
+        UniqueConstraint(
+            "user_id", "idempotency_key", name="uq_reservation_idempotency_key"
+        ),
     )
 
     id: Mapped[UuidPk]
-    client_id: Mapped[UUID] = mapped_column(ForeignKey("client.id"))
+    user_id: Mapped[UUID] = mapped_column(ForeignKey("users.id"))
     pickup_store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
     return_store_id: Mapped[UUID] = mapped_column(ForeignKey("store.id"))
     starts_on: Mapped[date] = mapped_column(Date)
@@ -267,8 +238,9 @@ class Reservation(Base):
     channel: Mapped[str] = mapped_column(String(20))
     created_at: Mapped[CreatedAt]
 
-    client: Mapped["Client"] = relationship(back_populates="reservations")
+    user: Mapped[User] = relationship()
     items: Mapped[list["ReservationItem"]] = relationship(back_populates="reservation")
+    idempotency_key: Mapped[str | None] = mapped_column(String(64))
     payments: Mapped[list["Payment"]] = relationship(back_populates="reservation")
 
 
