@@ -1,6 +1,7 @@
+from typing import Annotated
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.exc import IntegrityError
 
 from diafragma.auth.dependencies import require_admin
@@ -9,6 +10,10 @@ from diafragma.schemas.products.schemas import (
     CreateProductRequest,
     ProductResponse,
     UpdateProductRequest,
+)
+from diafragma.schemas.reservations.schemas import (
+    AvailabilityQuery,
+    AvailabilityResponse,
 )
 from diafragma.services.products.service import (
     InvalidRentalDaysError,
@@ -19,6 +24,7 @@ from diafragma.services.products.service import (
     get_products,
     update_product,
 )
+from diafragma.services.reservations.service import find_available_units
 
 router = APIRouter(prefix="/products", tags=["products"])
 
@@ -94,3 +100,25 @@ def delete(product_id: UUID, session: SessionDep) -> None:
         delete_product(product_id, session)
     except ProductNotFoundError:
         raise _not_found()
+
+
+@router.get("/{product_id}/availability", response_model=AvailabilityResponse)
+def availability(
+    product_id: UUID, query: Annotated[AvailabilityQuery, Query()], session: SessionDep
+):
+    try:
+        get_product(product_id, session)
+    except ProductNotFoundError:
+        raise _not_found()
+
+    units = find_available_units(
+        session, product_id, query.starts_on, query.ends_on, query.store_id
+    )
+
+    return AvailabilityResponse(
+        product_id=product_id,
+        starts_on=query.starts_on,
+        ends_on=query.ends_on,
+        available=len(units),
+        units=units,
+    )

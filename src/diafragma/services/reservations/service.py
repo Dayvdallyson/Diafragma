@@ -1,5 +1,6 @@
 from datetime import UTC, date, datetime, timedelta
 from uuid import UUID
+from zoneinfo import ZoneInfo
 
 from psycopg import errors as pg_errors
 from sqlalchemy import func, or_, select
@@ -32,6 +33,10 @@ class InvalidRentalPeriodError(Exception):
 
 
 class PriceNotFoundError(Exception):
+    pass
+
+
+class StoreNotFoundError(Exception):
     pass
 
 
@@ -109,10 +114,19 @@ def create_reservation(
     product = session.get(Product, product_id)
     if product is None:
         raise ProductNotFoundError(product_id)
+    store = session.get(Store, store_id)
+    if store is None:
+        raise StoreNotFoundError(store_id)
+
+    today = datetime.now(ZoneInfo(store.time_zone)).date()
+    if starts_on < today:
+        raise InvalidRentalPeriodError("starts_on cannot be in the past")
     days = (ends_on - starts_on).days
     if not product.min_rental_days <= days <= product.max_rental_days:
-        raise InvalidRentalPeriodError(days)
-    store = session.get_one(Store, store_id)
+        raise InvalidRentalPeriodError(
+            f"rental must last between {product.min_rental_days} and "
+            f"{product.max_rental_days} days, got {days}"
+        )
     price = _current_price(session, product_id, store.country)
 
     reservation = Reservation(
