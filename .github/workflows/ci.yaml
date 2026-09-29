@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  SECRET_KEY: ci-secret-not-for-production
+  SECRET_KEY: ci-secret-not-for-production-0123456789
 
 permissions:
   contents: read
