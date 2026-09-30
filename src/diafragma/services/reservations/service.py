@@ -3,7 +3,7 @@ from uuid import UUID
 from zoneinfo import ZoneInfo
 
 from psycopg import errors as pg_errors
-from sqlalchemy import func, or_, select
+from sqlalchemy import delete, func, or_, select, update
 from sqlalchemy.dialects.postgresql import Range
 from sqlalchemy.exc import DBAPIError, IntegrityError
 from sqlalchemy.orm import Session
@@ -174,3 +174,26 @@ def create_reservation(
 
     session.rollback()
     raise UnitUnavailableError(product_id)
+
+
+def expire_pending_reservations(
+    session: Session, *, now: datetime | None = None
+) -> int:
+    now = now or datetime.now(UTC)
+    expired_ids = session.scalars(
+        update(Reservation)
+        .where(Reservation.status == "pending", Reservation.expires_at <= now)
+        .values(status="expired")
+        .returning(Reservation.id)
+    ).all()
+
+    if expired_ids:
+        item_ids = select(ReservationItem.id).where(
+            ReservationItem.reservation_id.in_(expired_ids)
+        )
+        session.execute(
+            delete(UnitBlock).where(UnitBlock.reservation_item_id.in_(item_ids))
+        )
+
+    session.commit()
+    return len(expired_ids)
