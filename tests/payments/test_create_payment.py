@@ -2,8 +2,9 @@ from datetime import UTC, datetime, timedelta
 from uuid import UUID, uuid4
 
 import pytest
+from sqlalchemy.exc import IntegrityError
 
-from diafragma.models.products.models import ReservationItem, Unit
+from diafragma.models.products.models import Payment, ReservationItem, Unit
 from diafragma.services.payments.service import (
     ReservationNotFoundError,
     ReservationNotPayableError,
@@ -99,3 +100,49 @@ def test_rejects_pending_reservation_past_its_ttl(session, catalog, make_user):
         create_payment(
             session, user_id=user.id, reservation_id=reservation.id, now=after_ttl
         )
+
+
+def _payment(reservation, **overrides) -> Payment:
+    data = {
+        "reservation_id": reservation.id,
+        "kind": "rental",
+        "amount_cents": 100,
+        "currency": "BRL",
+        "provider": "stripe",
+    }
+    return Payment(**(data | overrides))
+
+
+def test_second_call_returns_the_existing_pending_payment(session, catalog, make_user):
+    user = make_user()
+    reservation = _reserve(session, catalog, user)
+
+    first = create_payment(session, user_id=user.id, reservation_id=reservation.id)
+    second = create_payment(session, user_id=user.id, reservation_id=reservation.id)
+
+    session.refresh(reservation)
+    assert second.id == first.id
+    assert len(reservation.payments) == 1
+
+
+def test_database_rejects_two_active_payments_for_the_same_reservation(
+    session, catalog, make_user
+):
+    reservation = _reserve(session, catalog, make_user())
+    session.add(_payment(reservation))
+    session.flush()
+
+    with pytest.raises(IntegrityError), session.begin_nested():
+        session.add(_payment(reservation))
+
+
+def test_declined_payment_does_not_block_a_new_one(session, catalog, make_user):
+    user = make_user()
+    reservation = _reserve(session, catalog, user)
+    first = create_payment(session, user_id=user.id, reservation_id=reservation.id)
+    first.status = "declined"
+    session.commit()
+
+    second = create_payment(session, user_id=user.id, reservation_id=reservation.id)
+
+    assert second.id != first.id

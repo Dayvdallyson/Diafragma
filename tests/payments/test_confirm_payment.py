@@ -38,7 +38,7 @@ def _pending_payment(session, catalog, user):
 
 def test_approves_payment_and_confirms_reservation(session, catalog, make_user):
     reservation, payment = _pending_payment(session, catalog, make_user())
-
+    result = confirm_payment(session, provider="stripe", external_id=EXTERNAL_ID)
     confirm_payment(session, provider="stripe", external_id=EXTERNAL_ID)
 
     session.refresh(payment)
@@ -46,6 +46,7 @@ def test_approves_payment_and_confirms_reservation(session, catalog, make_user):
     assert payment.status == "approved"
     assert payment.paid_at is not None
     assert reservation.status == "confirmed"
+    assert result.id == payment.id
 
 
 def test_is_idempotent_for_webhook_retries(session, catalog, make_user):

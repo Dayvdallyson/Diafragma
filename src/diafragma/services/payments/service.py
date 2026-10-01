@@ -2,11 +2,14 @@ from datetime import UTC, datetime
 from uuid import UUID
 
 from sqlalchemy import select, update
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from diafragma.models.products.models import Payment, Reservation
+from diafragma.services.reservations.service import _violated
 
 DEFAULT_PROVIDER = "stripe"
+ACTIVE_PAYMENT_INDEX = "uq_payment_one_active_per_reservation_kind"
 
 
 class ReservationNotFoundError(Exception):
@@ -25,6 +28,17 @@ class LatePaymentError(Exception):
     def __init__(self, payment: Payment):
         super().__init__(payment.id)
         self.payment = payment
+
+
+def _find_pending(session: Session, reservation_id: UUID) -> Payment | None:
+    payment = session.scalars(
+        select(Payment).where(
+            Payment.reservation_id == reservation_id,
+            Payment.kind == "rental",
+            Payment.status == "pending",
+        )
+    ).one_or_none()
+    return payment
 
 
 def rental_amount_cents(reservation: Reservation) -> int:
@@ -49,15 +63,24 @@ def create_payment(
     ):
         raise ReservationNotPayableError(reservation_id)
 
+    if existing := _find_pending(session, reservation_id):
+        return existing
+
     payment = Payment(
-        reservation_id=reservation.id,
+        reservation_id=reservation_id,
         kind="rental",
         amount_cents=rental_amount_cents(reservation),
         currency=reservation.currency,
         provider=provider,
     )
     session.add(payment)
-    session.commit()
+    try:
+        session.commit()
+    except IntegrityError as e:
+        session.rollback()
+        if _violated(e, ACTIVE_PAYMENT_INDEX):
+            return _find_pending(session, reservation.id)
+        raise
     return payment
 
 
@@ -97,4 +120,4 @@ def confirm_payment(
 
     if confirmed is None:
         raise LatePaymentError(payment)
-    return Payment
+    return payment

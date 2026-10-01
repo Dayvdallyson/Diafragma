@@ -7,6 +7,7 @@ from sqlalchemy import (
     Date,
     DateTime,
     ForeignKey,
+    Index,
     SmallInteger,
     String,
     Text,
@@ -265,6 +266,13 @@ class ReservationItem(Base):
 class Payment(Base):
     __tablename__ = "payment"
     __table_args__ = (
+        Index(
+            "uq_payment_one_active_per_reservation_kind",
+            "reservation_id",
+            "kind",
+            unique=True,
+            postgresql_where=text("status IN ('pending', 'approved')"),
+        ),
         UniqueConstraint("provider", "external_id"),
         CheckConstraint("amount_cents > 0", name="amount_positive"),
         CheckConstraint(
